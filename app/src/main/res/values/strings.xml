@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Food Market Hub</string>
+    <string name="siparisiniz_onaylandi">Siparişiniz onaylandı!</string>
+    <string name="sepeti_onayla">Sepeti Onayla</string>
+    <string name="yemek_detayi">Yemek Detayı</string>
+    <string name="yemek_adi">Yemek Adı</string>
+    <string name="sepete_ekle">Sepete Ekle</string>
+    <string name="minus">-</string>
+    <string name="one">1</string>
+    <string name="plus">+</string>
+    <string name="yemek_fiyati">Yemek Fiyatı</string>
+</resources>

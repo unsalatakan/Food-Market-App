@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="yemekListeToolbarBaslik" type="String" />
+        <variable name="yemekListeFragment" type="com.atakan.foodmarkethub.ui.fragment.YemekListeFragment" />
+        <variable name="yemeklerAdapter" type="com.atakan.foodmarkethub.ui.adapter.YemeklerAdapter" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AnasayfaFragment"
+        android:background="#F6F6F6">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarAnasayfa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{yemekListeToolbarBaslik}"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:fontFamily="@font/montserratsemibold"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"/>
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewTumYemekler"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:adapter="@{yemeklerAdapter}"
+            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+            app:spanCount="3"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarAnasayfa" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

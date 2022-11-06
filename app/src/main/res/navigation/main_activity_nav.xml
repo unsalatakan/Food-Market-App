@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/yemekListeFragment">
+
+    <fragment
+        android:id="@+id/yemekDetayFragment"
+        android:name="com.atakan.foodmarkethub.ui.fragment.YemekDetayFragment"
+        android:label="YemekDetayFragment"
+        tools:layout="@layout/fragment_yemek_detay">
+        <argument
+            android:name="yemek"
+            app:argType="com.atakan.foodmarkethub.data.entity.Yemekler" />
+        <action
+            android:id="@+id/sepeteGecis"
+            app:destination="@id/sepetFragment" />
+        <action
+            android:id="@+id/detaydanYemekListeyeGecis"
+            app:destination="@id/yemekListeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/yemekListeFragment"
+        android:name="com.atakan.foodmarkethub.ui.fragment.YemekListeFragment"
+        android:label="YemekListeFragment"
+        tools:layout="@layout/fragment_yemek_liste">
+        <action
+            android:id="@+id/yemekDetayGecis"
+            app:destination="@id/yemekDetayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sepetFragment"
+        android:name="com.atakan.foodmarkethub.ui.fragment.SepetFragment"
+        android:label="fragment_sepet"
+        tools:layout="@layout/fragment_sepet" >
+        <action
+            android:id="@+id/sepet_odeme_gecis"
+            app:destination="@id/orderSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderSuccessFragment"
+        android:name="com.atakan.foodmarkethub.ui.fragment.OrderSuccessFragment"
+        android:label="fragment_order_success"
+        tools:layout="@layout/fragment_order_success" />
+
+</navigation>
