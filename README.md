@@ -10,7 +10,7 @@
 - Hilt
 - Livedata
 
-Screenshots:
+# Screenshots:
 <table>
  <tr>
    <td>
@@ -31,12 +31,12 @@ Screenshots:
     </tr>
  </table>
  
- Splash Screen:
+# Splash Screen:
  <br><br>
   <img src="https://user-images.githubusercontent.com/45185182/200177063-870ac431-a23d-4df1-a3ad-54d4240f1266.gif" width="300">
 
  
- Demo:
+# Demo:
  <br><br>
   <img src="https://user-images.githubusercontent.com/45185182/200177590-1ad342b5-6d92-44cc-8089-f38f4ac231f6.gif" width="300">
 
